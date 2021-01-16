@@ -10,7 +10,9 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { ClienteService} from './clientes/cliente.service';
 import {RouterModule, Routes} from '@angular/router';
 import { PrecioComponent } from './precio/precio.component';
-
+import {HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { FormComponent } from './clientes/form.component';
 
 const routes: Routes =[
 
@@ -18,6 +20,8 @@ const routes: Routes =[
   {path: 'directivas', component: DirectivaComponent},
   {path: 'clientes', component: ClientesComponent},
   {path: 'precios', component: PrecioComponent},
+  {path: 'home', component: HomeComponent},
+
 
 
 
@@ -33,10 +37,13 @@ const routes: Routes =[
     DirectivaComponent,
     ClientesComponent,
     PrecioComponent,
+    HomeComponent,
+    FormComponent,
 
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     RouterModule.forRoot(routes)
   ],
