@@ -13,6 +13,7 @@ import { PrecioComponent } from './precio/precio.component';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { FormComponent } from './clientes/form.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes =[
 
@@ -21,6 +22,8 @@ const routes: Routes =[
   {path: 'clientes', component: ClientesComponent},
   {path: 'precios', component: PrecioComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'clientes/form', component: FormComponent},
+
 
 
 
@@ -45,6 +48,7 @@ const routes: Routes =[
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ClienteService],
